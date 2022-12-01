@@ -7,7 +7,7 @@ pub fn solution() {
     // Trim the end of the file to ensure no \n will remain to screw you over later
     let trimmed_input = input.trim_end();
 
-    // Use Rusts powerful method chaining to split the string into groups, parse them into i32s and finally sum and sort them.
+    // Use Rust's powerful method chaining to split the string into groups, parse them into i32s and finally sum and sort them.
     let mut groups: Vec<i32> = trimmed_input
         .split("\n\n")
         .map(|x| x.split("\n").collect())
