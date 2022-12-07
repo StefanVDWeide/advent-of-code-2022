@@ -1,6 +1,7 @@
 use std::collections::HashSet;
 use std::fs;
 
+// TODO: Clean up code - split in functions
 pub fn solution() {
     // Read the input.txt file provided by the Advent of Code website
     let input = fs::read_to_string("src/day_6/input.txt").expect("Error during reading the input");
