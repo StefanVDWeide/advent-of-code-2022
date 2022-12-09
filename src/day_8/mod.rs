@@ -8,7 +8,7 @@ pub fn solution() {
     // Trim the end of the file to ensure no \n will remain to screw you over later
     let trimmed_input = input.trim_end();
 
-    let mut tree_grid: Vec<Vec<i32>> = trimmed_input
+    let tree_grid: Vec<Vec<i32>> = trimmed_input
         .lines()
         .map(|line| {
             line.split_terminator("")
@@ -24,7 +24,6 @@ pub fn solution() {
     for (row_index, row) in tree_grid.iter().enumerate() {
         for (column_index, tree) in row.iter().enumerate() {
             // The very first tree and the very last tree on the edges are always visisble
-
             if row_index == 0
                 || row_index == tree_grid.len() - 1
                 || column_index == 0
@@ -77,6 +76,7 @@ pub fn solution() {
             // #########################################################
             // Part 2
 
+            // Reverse part of the vector so that we start at the index and walk backwards since we need to count from the index
             let reverse_left_values = &row[0..column_index].to_vec();
             // Check left of curent index
             for item in reverse_left_values.iter().rev() {
@@ -93,6 +93,7 @@ pub fn solution() {
                 }
             }
 
+            // Reverse part of the vector so that we start at the index and walk backwards since we need to count from the index
             let reverse_up_values = &tree_grid[0..row_index].to_vec();
             // Check up of index
             for item in reverse_up_values.iter().rev() {

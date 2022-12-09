@@ -6,6 +6,7 @@ mod day_5;
 mod day_6;
 mod day_7;
 mod day_8;
+mod day_9;
 
 // Main entry point for the program
 fn main() {
@@ -16,5 +17,6 @@ fn main() {
     // day_5::solution();
     // day_6::solution();
     // day_7::solution();
-    day_8::solution();
+    // day_8::solution();
+    day_9::solution();
 }
